@@ -27,9 +27,9 @@
 				
 			
 	if ($lk->query($sql) === TRUE) {
-		//Success
+		//Success Message
 	} else {
-		//Error
+		//Error Message
 	}
 ?>
 
