@@ -40,11 +40,8 @@ input[type=text]:focus {
   border: 3px solid #555;
 }
 
-.info {background-color: #2196F3;} /* Blue       */
+.info {background-color: #2196F3;} /* Blue */
 .info:hover {background: #0b7dda;}
-
-
-
 
 
 </style>
