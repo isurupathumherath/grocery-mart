@@ -1,0 +1,752 @@
+<?php
+
+include("./php/config.php"); 
+
+?>
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		/* The grid: Four equal columns that floats next to each other */
+		.GMitem-column {
+			float: left;
+			width: 25%;
+			height: 200px;
+			padding: 10px;
+			margin-top: 60px;
+		}
+		
+		.GMitem-card button{
+			border: none;
+			outline: 0;
+			padding: 12px;
+			color: white;
+			background-color:  111, 252, 3;
+			text-align: center;
+			cursor: pointer;
+			width: 100%;
+			font-size: 18px;
+		}
+	
+		
+		.GMitem-card-inner button:hover {
+			opacity: 0.7;
+		}
+		a {
+			text-decoration: none;
+			display: inline-block;
+			padding: 8px 16px;
+		}
+
+		a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+
+		.previousbtn {
+			margin-top: 100px;
+			background-color: 111, 252, 3;
+			color: black;
+		}
+		.view {
+			background-color: 111, 252, 3;
+			}
+	</style>
+
+</head>
+<body>
+
+<div style="margin-left: 30px">
+<div>
+	<div class="GMitem-column">
+	<div class="GMitem-card">
+		<div class="GMitem-card-inner">
+			<div class="GMitem-card-front">
+			<?php
+			$sql1 = "SELECT barcode,name FROM images ORDER BY RAND() LIMIT 1"; 
+			$result1 = mysqli_query($link,$sql1); 
+			$row1 = mysqli_fetch_array($result1);
+			if(mysqli_num_rows($result1) > 0){ 
+				$image1 = $row1['name']; 
+				$barcode1 = $row1['barcode'];
+				$image_src1 = "./admin/upload/".$image1;
+				
+			} else {
+				echo "<center>NO PHOTO AVAILABLE</center>";
+			}
+			?>
+			  <img src='<?php echo $image_src1;?>' alt="item_image" style="width:250px;height:150px;">
+			</div>
+			<div class="GMitem-card-back">
+			<?php
+				
+				
+				//$_SESSION['brcd'] = $barcode1;
+				$sql11 = "SELECT * FROM items WHERE barcode=$barcode1";
+				$result11= mysqli_query($link,$sql11);
+				$row11 = mysqli_fetch_array($result11);
+				if(mysqli_num_rows($result11) > 0) {
+					$name11 = $row11['name'];
+					$price11 = $row11['unit_price'];
+				} else {
+					echo "<center>NO DATA AVAILABLE</center>";
+				}
+			?>
+			  <h1><?php echo $name11 ; ?></h1> 
+			  <p>Price: Rs. <?php echo $price11 ; ?> /=</p> 
+			  
+			</div>
+		  </div>
+		  <p><button onclick="location.href='php/addtocart.php' <?php $_SESSION['brcd'] = $barcode1; ?>">Add to Cart</button></p>
+		  <p><button onclick="location.href='php/productdetails.php' <?php $_SESSION['brcd'] = $barcode1; ?>">View Product</button></p>
+	</div>
+	</div>
+
+	<div class="GMitem-column">
+	<div class="GMitem-card">
+		<div class="GMitem-card-inner">
+			<div class="GMitem-card-front">
+			<?php
+			$sql2 = "SELECT barcode,name FROM images ORDER BY RAND() LIMIT 1"; 
+			$result2 = mysqli_query($link,$sql2); 
+			$row2 = mysqli_fetch_array($result2);
+			if(mysqli_num_rows($result2) > 0){ 
+				$image2 = $row2['name']; 
+				$barcode2 = $row2['barcode'];
+				$image_src2 = "./admin/upload/".$image2;
+				
+			} else {
+				echo "<center>NO PHOTO AVAILABLE</center>";
+			}
+			?>
+			  <img src='<?php echo $image_src2;?>' alt="item_image" style="width:250px;height:150px;">
+			</div>
+			<div class="GMitem-card-back">
+			<?php
+				
+				$sql22 = "SELECT * FROM items WHERE barcode=$barcode2";
+				$result22= mysqli_query($link,$sql22);
+				$row22 = mysqli_fetch_array($result22);
+				if(mysqli_num_rows($result22) > 0) {
+					$name22 = $row22['name'];
+					$price22 = $row22['unit_price'];
+				} else {
+					echo "<center>NO DATA AVAILABLE</center>";
+				}
+			?>
+			  <h1><?php echo $name22 ; ?></h1> 
+			  <p>Price: Rs. <?php echo $price22 ; ?> /=</p> 
+			  
+			</div>
+		  </div>
+		  <p><button onclick="location.href='php/addtocart.php' <?php $_SESSION['brcd'] = $barcode2; ?>">Add to Cart</button></p>
+		  <p><button onclick="location.href='php/productdetails.php' <?php $_SESSION['brcd'] = $barcode2; ?>">View Product</button></p>
+	</div>
+	</div>
+	
+	<div class="GMitem-column">
+	<div class="GMitem-card">
+		<div class="GMitem-card-inner">
+			<div class="GMitem-card-front">
+			<?php
+			$sql3 = "SELECT barcode,name FROM images ORDER BY RAND() LIMIT 1"; 
+			$result3 = mysqli_query($link,$sql3); 
+			$row3 = mysqli_fetch_array($result3);
+			if(mysqli_num_rows($result3) > 0){ 
+				$image3 = $row3['name']; 
+				$barcode3 = $row3['barcode'];
+				$image_src3 = "./admin/upload/".$image3;
+				
+			} else {
+				echo "<center>NO PHOTO AVAILABLE</center>";
+			}
+			?>
+			  <img src='<?php echo $image_src3;?>' alt="item_image" style="width:250px;height:150px;">
+			</div>
+			<div class="GMitem-card-back">
+			<?php
+				
+				$sql33 = "SELECT * FROM items WHERE barcode=$barcode3";
+				$result33= mysqli_query($link,$sql33);
+				$row33 = mysqli_fetch_array($result33);
+				if(mysqli_num_rows($result11) > 0) {
+					$name33 = $row33['name'];
+					$price33 = $row33['unit_price'];
+				} else {
+					echo "<center>NO DATA AVAILABLE</center>";
+				}
+			?>
+			  <h1><?php echo $name33 ; ?></h1> 
+			  <p>Price: Rs. <?php echo $price33 ; ?> /=</p> 
+			  
+			</div>
+		  </div>
+		  <p><button onclick="location.href='php/addtocart.php' <?php $_SESSION['brcd'] = $barcode3; ?>">Add to Cart</button></p>
+		  <p><button onclick="location.href='php/productdetails.php' <?php $_SESSION['brcd'] = $barcode3; ?>">View Product</button></p>
+	</div>
+	</div>
+	
+	<div class="GMitem-column">
+	<div class="GMitem-card">
+		<div class="GMitem-card-inner">
+			<div class="GMitem-card-front">
+			<?php
+			$sql4 = "SELECT barcode,name FROM images ORDER BY RAND() LIMIT 1"; 
+			$result4 = mysqli_query($link,$sql4); 
+			$row4 = mysqli_fetch_array($result4);
+			if(mysqli_num_rows($result4) > 0){ 
+				$image4 = $row4['name']; 
+				$barcode4 = $row4['barcode'];
+				$image_src4 = "./admin/upload/".$image4;
+				
+			} else {
+				echo "<center>NO PHOTO AVAILABLE</center>";
+			}
+			?>
+			  <img src='<?php echo $image_src4;?>' alt="item_image" style="width:250px;height:150px;">
+			</div>
+			<div class="GMitem-card-back">
+			<?php
+				
+				$sql44 = "SELECT * FROM items WHERE barcode=$barcode4";
+				$result44= mysqli_query($link,$sql44);
+				$row44 = mysqli_fetch_array($result44);
+				if(mysqli_num_rows($result44) > 0) {
+					$name44 = $row44['name'];
+					$price44 = $row44['unit_price'];
+				} else {
+					echo "<center>NO DATA AVAILABLE</center>";
+				}
+			?>
+			  <h1><?php echo $name44 ; ?></h1> 
+			  <p>Price: Rs. <?php echo $price44 ; ?> /=</p> 
+			  
+			</div>
+		  </div>
+		  <p><button onclick="location.href='php/addtocart.php' <?php $_SESSION['brcd'] = $barcode4; ?>">Add to Cart</button></p>
+		  <p><button onclick="location.href='php/productdetails.php' <?php $_SESSION['brcd'] = $barcode4; ?>"">View Product</button></p>
+	</div>
+	</div>
+</div>
+
+<div>
+	<div class="GMitem-column">
+	<div class="GMitem-card">
+		<div class="GMitem-card-inner">
+			<div class="GMitem-card-front">
+			<?php
+			$sql5 = "SELECT barcode,name FROM images ORDER BY RAND() LIMIT 1"; 
+			$result5 = mysqli_query($link,$sql5); 
+			$row5 = mysqli_fetch_array($result5);
+			if(mysqli_num_rows($result4) > 0){ 
+				$image5 = $row5['name']; 
+				$barcode5 = $row5['barcode'];
+				$image_src5 = "./admin/upload/".$image5;
+				
+			} else {
+				echo "<center>NO PHOTO AVAILABLE</center>";
+			}
+			?>
+			  <img src='<?php echo $image_src5;?>' alt="item_image" style="width:250px;height:150px;">
+			</div>
+			<div class="GMitem-card-back">
+			<?php
+				
+				$sql55 = "SELECT * FROM items WHERE barcode=$barcode5";
+				$result55= mysqli_query($link,$sql55);
+				$row55 = mysqli_fetch_array($result55);
+				if(mysqli_num_rows($result55) > 0) {
+					$name55 = $row55['name'];
+					$price55 = $row55['unit_price'];
+				} else {
+					echo "<center>NO DATA AVAILABLE</center>";
+				}
+			?>
+			  <h1><?php echo $name55 ; ?></h1> 
+			  <p>Price: Rs. <?php echo $price55 ; ?> /=</p> 
+			  
+			</div>
+		  </div>
+		  <p><button onclick="location.href='php/addtocart.php' <?php $_SESSION['brcd'] = $barcode5; ?>">Add to Cart</button></p>
+		  <p><button onclick="location.href='php/productdetails.php' <?php $_SESSION['brcd'] = $barcode5; ?>">View Product</button></p>
+	</div>
+	</div>
+
+	<div class="GMitem-column">
+	<div class="GMitem-card">
+		<div class="GMitem-card-inner">
+			<div class="GMitem-card-front">
+			<?php
+			$sql6 = "SELECT barcode,name FROM images ORDER BY RAND() LIMIT 1"; 
+			$result6 = mysqli_query($link,$sql6); 
+			$row6 = mysqli_fetch_array($result6);
+			if(mysqli_num_rows($result6) > 0){ 
+				$image6 = $row6['name']; 
+				$barcode6 = $row6['barcode'];
+				$image_src6 = "./admin/upload/".$image6;
+				
+			} else {
+				echo "<center>NO PHOTO AVAILABLE</center>";
+			}
+			?>
+			  <img src='<?php echo $image_src6;?>' alt="item_image" style="width:250px;height:150px;">
+			</div>
+			<div class="GMitem-card-back">
+			<?php
+				
+				$sql66 = "SELECT * FROM items WHERE barcode=$barcode6";
+				$result66= mysqli_query($link,$sql66);
+				$row66 = mysqli_fetch_array($result66);
+				if(mysqli_num_rows($result66) > 0) {
+					$name66 = $row66['name'];
+					$price66 = $row66['unit_price'];
+				} else {
+					echo "<center>NO DATA AVAILABLE</center>";
+				}
+			?>
+			  <h1><?php echo $name66 ; ?></h1> 
+			  <p>Price: Rs. <?php echo $price66 ; ?> /=</p> 
+			  
+			</div>
+		  </div>
+		  <p><button onclick="location.href='php/addtocart.php' <?php $_SESSION['brcd'] = $barcode6; ?>">Add to Cart</button></p>
+		  <p><button onclick="location.href='php/productdetails.php' <?php $_SESSION['brcd'] = $barcode6; ?>">View Product</button></p>
+	</div>
+	</div>
+	
+	<div class="GMitem-column">
+	<div class="GMitem-card">
+		<div class="GMitem-card-inner">
+			<div class="GMitem-card-front">
+			<?php
+			$sql7 = "SELECT barcode,name FROM images ORDER BY RAND() LIMIT 1"; 
+			$result7 = mysqli_query($link,$sql7); 
+			$row7 = mysqli_fetch_array($result7);
+			if(mysqli_num_rows($result7) > 0){ 
+				$image7 = $row7['name']; 
+				$barcode7 = $row7['barcode'];
+				$image_src7 = "./admin/upload/".$image7;
+				
+			} else {
+				echo "<center>NO PHOTO AVAILABLE</center>";
+			}
+			?>
+			  <img src='<?php echo $image_src7;?>' alt="item_image" style="width:250px;height:150px;">
+			</div>
+			<div class="GMitem-card-back">
+			<?php
+				
+				$sql77 = "SELECT * FROM items WHERE barcode=$barcode7";
+				$result77= mysqli_query($link,$sql77);
+				$row77 = mysqli_fetch_array($result77);
+				if(mysqli_num_rows($result77) > 0) {
+					$name77 = $row77['name'];
+					$price77 = $row77['unit_price'];
+				} else {
+					echo "<center>NO DATA AVAILABLE</center>";
+				}
+			?>
+			  <h1><?php echo $name77 ; ?></h1> 
+			  <p>Price: Rs. <?php echo $price77 ; ?> /=</p> 
+			  
+			</div>
+		  </div>
+		  <p><button onclick="location.href='php/addtocart.php' <?php $_SESSION['brcd'] = $barcode7; ?>">Add to Cart</button></p>
+		  <p><button onclick="location.href='php/productdetails.php' <?php $_SESSION['brcd'] = $barcode7; ?>">View Product</button></p>
+	</div>
+	</div>
+	
+	<div class="GMitem-column">
+	<div class="GMitem-card">
+		<div class="GMitem-card-inner">
+			<div class="GMitem-card-front">
+			<?php
+			$sql8 = "SELECT barcode,name FROM images ORDER BY RAND() LIMIT 1"; 
+			$result8 = mysqli_query($link,$sql8); 
+			$row8 = mysqli_fetch_array($result8);
+			if(mysqli_num_rows($result8) > 0){ 
+				$image8 = $row8['name']; 
+				$barcode8 = $row8['barcode'];
+				$image_src8 = "./admin/upload/".$image8;
+				
+			} else {
+				echo "<center>NO PHOTO AVAILABLE</center>";
+			}
+			?>
+			  <img src='<?php echo $image_src8;?>' alt="item_image" style="width:250px;height:150px;">
+			</div>
+			<div class="GMitem-card-back">
+			<?php
+				
+				$sql88 = "SELECT * FROM items WHERE barcode=$barcode8";
+				$result88= mysqli_query($link,$sql88);
+				$row88 = mysqli_fetch_array($result88);
+				if(mysqli_num_rows($result88) > 0) {
+					$name88 = $row88['name'];
+					$price88 = $row88['unit_price'];
+				} else {
+					echo "<center>NO DATA AVAILABLE</center>";
+				}
+			?>
+			  <h1><?php echo $name88 ; ?></h1> 
+			  <p>Price: Rs. <?php echo $price88 ; ?> /=</p> 
+			  
+			</div>
+		  </div>
+		  <p><button onclick="location.href='php/addtocart.php' <?php $_SESSION['brcd'] = $barcode8; ?>">Add to Cart</button></p>
+		  <p><button onclick="location.href='php/productdetails.php' <?php $_SESSION['brcd'] = $barcode8; ?>">View Product</button></p>
+	</div>
+	</div>
+</div>
+
+<div>
+	<div class="GMitem-column">
+	<div class="GMitem-card">
+		<div class="GMitem-card-inner">
+			<div class="GMitem-card-front">
+			<?php
+			$sql9 = "SELECT barcode,name FROM images ORDER BY RAND() LIMIT 1"; 
+			$result9 = mysqli_query($link,$sql9); 
+			$row9 = mysqli_fetch_array($result9);
+			if(mysqli_num_rows($result9) > 0){ 
+				$image9 = $row9['name']; 
+				$barcode9 = $row9['barcode'];
+				$image_src9 = "./admin/upload/".$image9;
+				
+			} else {
+				echo "<center>NO PHOTO AVAILABLE</center>";
+			}
+			?>
+			  <img src='<?php echo $image_src9;?>' alt="item_image" style="width:250px;height:150px;">
+			</div>
+			<div class="GMitem-card-back">
+			<?php
+				
+				$sql99 = "SELECT * FROM items WHERE barcode=$barcode9";
+				$result99= mysqli_query($link,$sql99);
+				$row99 = mysqli_fetch_array($result99);
+				if(mysqli_num_rows($result99) > 0) {
+					$name99 = $row99['name'];
+					$price99 = $row99['unit_price'];
+				} else {
+					echo "<center>NO DATA AVAILABLE</center>";
+				}
+			?>
+			  <h1><?php echo $name99 ; ?></h1> 
+			  <p>Price: Rs. <?php echo $price99 ; ?> /=</p> 
+			  
+			</div>
+		  </div>
+		  <p><button onclick="location.href='php/addtocart.php' <?php $_SESSION['brcd'] = $barcode9; ?>">Add to Cart</button></p>
+		  <p><button onclick="location.href='php/productdetails.php' <?php $_SESSION['brcd'] = $barcode9; ?>">View Product</button></p>
+	</div>
+	</div>
+
+	<div class="GMitem-column">
+	<div class="GMitem-card">
+		<div class="GMitem-card-inner">
+			<div class="GMitem-card-front">
+			<?php
+			$sqlq1 = "SELECT barcode,name FROM images ORDER BY RAND() LIMIT 1"; 
+			$resultq1 = mysqli_query($link,$sqlq1); 
+			$rowq1 = mysqli_fetch_array($resultq1);
+			if(mysqli_num_rows($resultq1) > 0){ 
+				$imageq1 = $rowq1['name']; 
+				$barcodeq1 = $rowq1['barcode'];
+				$image_srcq1 = "./admin/upload/".$imageq1;
+				
+			} else {
+				echo "<center>NO PHOTO AVAILABLE</center>";
+			}
+			?>
+			  <img src='<?php echo $image_srcq1;?>' alt="item_image" style="width:250px;height:150px;">
+			</div>
+			<div class="GMitem-card-back">
+			<?php
+				
+				$sqlqq1 = "SELECT * FROM items WHERE barcode=$barcodeq1";
+				$resultqq1= mysqli_query($link,$sqlqq1);
+				$rowqq1 = mysqli_fetch_array($resultqq1);
+				if(mysqli_num_rows($resultqq1) > 0) {
+					$nameqq1 = $rowqq1['name'];
+					$priceqq1 = $rowqq1['unit_price'];
+				} else {
+					echo "<center>NO DATA AVAILABLE</center>";
+				}
+			?>
+			  <h1><?php echo $nameqq1 ; ?></h1> 
+			  <p>Price: Rs. <?php echo $priceqq1 ; ?> /=</p> 
+			  
+			</div>
+		  </div>
+		  <p><button onclick="location.href='php/addtocart.php' <?php $_SESSION['brcd'] = $barcodeq1; ?>">Add to Cart</button></p>
+		  <p><button onclick="location.href='php/productdetails.php' <?php $_SESSION['brcd'] = $barcodeq1; ?>">View Product</button></p>
+	</div>
+	</div>
+	
+	<div class="GMitem-column">
+	<div class="GMitem-card">
+		<div class="GMitem-card-inner">
+			<div class="GMitem-card-front">
+			<?php
+			$sqlq2 = "SELECT barcode,name FROM images ORDER BY RAND() LIMIT 1"; 
+			$resultq2 = mysqli_query($link,$sqlq2); 
+			$rowq2 = mysqli_fetch_array($resultq2);
+			if(mysqli_num_rows($resultq2) > 0){ 
+				$imageq2 = $rowq2['name']; 
+				$barcodeq2 = $rowq2['barcode'];
+				$image_srcq2 = "./admin/upload/".$imageq2;
+				
+			} else {
+				echo "<center>NO PHOTO AVAILABLE</center>";
+			}
+			?>
+			  <img src='<?php echo $image_srcq2;?>' alt="item_image" style="width:250px;height:150px;">
+			</div>
+			<div class="GMitem-card-back">
+			<?php
+				
+				$sqlqq2 = "SELECT * FROM items WHERE barcode=$barcodeq2";
+				$resultqq2= mysqli_query($link,$sqlqq2);
+				$rowqq2 = mysqli_fetch_array($resultqq2);
+				if(mysqli_num_rows($resultqq2) > 0) {
+					$nameqq2 = $rowqq2['name'];
+					$priceqq2 = $rowqq2['unit_price'];
+				} else {
+					echo "<center>NO DATA AVAILABLE</center>";
+				}
+			?>
+			  <h1><?php echo $nameqq2 ; ?></h1> 
+			  <p>Price: Rs. <?php echo $priceqq2 ; ?> /=</p> 
+			  
+			</div>
+		  </div>
+		  <p><button onclick="location.href='php/addtocart.php' <?php $_SESSION['brcd'] = $barcodeq2; ?>">Add to Cart</button></p>
+		  <p><button onclick="location.href='php/productdetails.php' <?php $_SESSION['brcd'] = $barcodeq2; ?>">View Product</button></p>
+	</div>
+	</div>
+	
+	<div class="GMitem-column">
+	<div class="GMitem-card">
+		<div class="GMitem-card-inner">
+			<div class="GMitem-card-front">
+			<?php
+			$sqlq3 = "SELECT barcode,name FROM images ORDER BY RAND() LIMIT 1"; 
+			$resultq3 = mysqli_query($link,$sqlq3); 
+			$rowq3 = mysqli_fetch_array($resultq3);
+			if(mysqli_num_rows($resultq3) > 0){ 
+				$imageq3 = $rowq3['name']; 
+				$barcodeq3 = $rowq3['barcode'];
+				$image_srcq3 = "./admin/upload/".$imageq3;
+				
+			} else {
+				echo "<center>NO PHOTO AVAILABLE</center>";
+			}
+			?>
+			  <img src='<?php echo $image_srcq3;?>' alt="item_image" style="width:250px;height:150px;">
+			</div>
+			<div class="GMitem-card-back">
+			<?php
+				
+				$sqlqq3 = "SELECT * FROM items WHERE barcode=$barcodeq3";
+				$resultqq3= mysqli_query($link,$sqlqq3);
+				$rowqq3 = mysqli_fetch_array($resultqq3);
+				if(mysqli_num_rows($resultqq3) > 0) {
+					$nameqq3 = $rowqq3['name'];
+					$priceqq3 = $rowqq3['unit_price'];
+				} else {
+					echo "<center>NO DATA AVAILABLE</center>";
+				}
+			?>
+			  <h1><?php echo $nameqq3 ; ?></h1> 
+			  <p>Price: Rs. <?php echo $priceqq3 ; ?> /=</p> 
+			  
+			</div>
+		  </div>
+		  <p><button onclick="location.href='php/addtocart.php' <?php $_SESSION['brcd'] = $barcodeq3; ?>">Add to Cart</button></p>
+		  <p><button onclick="location.href='php/productdetails.php' <?php $_SESSION['brcd'] = $barcodeq3; ?>">View Product</button></p>
+	</div>
+	</div>
+</div>
+
+<div>
+	<div class="GMitem-column">
+	<div class="GMitem-card">
+		<div class="GMitem-card-inner">
+			<div class="GMitem-card-front">
+			<?php
+			$sqlq4 = "SELECT barcode,name FROM images ORDER BY RAND() LIMIT 1"; 
+			$resultq4 = mysqli_query($link,$sqlq4); 
+			$rowq4 = mysqli_fetch_array($resultq4);
+			if(mysqli_num_rows($resultq4) > 0){ 
+				$imageq4 = $rowq4['name']; 
+				$barcodeq4 = $rowq4['barcode'];
+				$image_srcq4 = "./admin/upload/".$imageq4;
+				
+			} else {
+				echo "<center>NO PHOTO AVAILABLE</center>";
+			}
+			?>
+			  <img src='<?php echo $image_srcq4;?>' alt="item_image" style="width:250px;height:150px;">
+			</div>
+			<div class="GMitem-card-back">
+			<?php
+				
+				$sqlqq4 = "SELECT * FROM items WHERE barcode=$barcodeq4";
+				$resultqq4= mysqli_query($link,$sqlqq4);
+				$rowqq4 = mysqli_fetch_array($resultqq4);
+				if(mysqli_num_rows($resultqq4) > 0) {
+					$nameqq4 = $rowqq4['name'];
+					$priceqq4 = $rowqq4['unit_price'];
+				} else {
+					echo "<center>NO DATA AVAILABLE</center>";
+				}
+			?>
+			  <h1><?php echo $nameqq4 ; ?></h1> 
+			  <p>Price: Rs. <?php echo $priceqq4 ; ?> /=</p> 
+			  
+			</div>
+		  </div>
+		  <p><button onclick="location.href='php/addtocart.php' <?php $_SESSION['brcd'] = $barcodeq4; ?>">Add to Cart</button></p>
+		  <p><button onclick="location.href='php/productdetails.php' <?php $_SESSION['brcd'] = $barcodeq4; ?>">View Product</button></p>
+	</div>
+	</div>
+
+	<div class="GMitem-column">
+	<div class="GMitem-card">
+		<div class="GMitem-card-inner">
+			<div class="GMitem-card-front">
+			<?php
+			$sqlq5 = "SELECT barcode,name FROM images ORDER BY RAND() LIMIT 1"; 
+			$resultq5 = mysqli_query($link,$sqlq5); 
+			$rowq5 = mysqli_fetch_array($resultq5);
+			if(mysqli_num_rows($resultq5) > 0){ 
+				$imageq5 = $rowq5['name']; 
+				$barcodeq5 = $rowq5['barcode'];
+				$image_srcq5 = "./admin/upload/".$imageq5;
+				
+			} else {
+				echo "<center>NO PHOTO AVAILABLE</center>";
+			}
+			?>
+			  <img src='<?php echo $image_srcq5;?>' alt="item_image" style="width:250px;height:150px;">
+			</div>
+			<div class="GMitem-card-back">
+			<?php
+				
+				$sqlqq5 = "SELECT * FROM items WHERE barcode=$barcodeq5";
+				$resultqq5= mysqli_query($link,$sqlqq5);
+				$rowqq5 = mysqli_fetch_array($resultqq5);
+				if(mysqli_num_rows($resultqq5) > 0) {
+					$nameqq5 = $rowqq5['name'];
+					$priceqq5 = $rowqq5['unit_price'];
+				} else {
+					echo "<center>NO DATA AVAILABLE</center>";
+				}
+			?>
+			  <h1><?php echo $nameqq5 ; ?></h1> 
+			  <p>Price: Rs. <?php echo $priceqq5 ; ?> /=</p> 
+			  
+			</div>
+		  </div>
+		  <p><button onclick="location.href='php/addtocart.php' <?php $_SESSION['brcd'] = $barcodeq5; ?>">Add to Cart</button></p>
+		  <p><button onclick="location.href='php/productdetails.php' <?php $_SESSION['brcd'] = $barcodeq5; ?>">View Product</button></p>
+	</div>
+	</div>
+	
+	<div class="GMitem-column">
+	<div class="GMitem-card">
+		<div class="GMitem-card-inner">
+			<div class="GMitem-card-front">
+			<?php
+			$sqlq6 = "SELECT barcode,name FROM images ORDER BY RAND() LIMIT 1"; 
+			$resultq6 = mysqli_query($link,$sqlq6); 
+			$rowq6 = mysqli_fetch_array($resultq6);
+			if(mysqli_num_rows($resultq6) > 0){ 
+				$imageq6 = $rowq6['name']; 
+				$barcodeq6 = $rowq6['barcode'];
+				$image_srcq6 = "./admin/upload/".$imageq6;
+				
+			} else {
+				echo "<center>NO PHOTO AVAILABLE</center>";
+			}
+			?>
+			  <img src='<?php echo $image_srcq6;?>' alt="item_image" style="width:250px;height:150px;">
+			</div>
+			<div class="GMitem-card-back">
+			<?php
+				
+				$sqlqq6 = "SELECT * FROM items WHERE barcode=$barcodeq6";
+				$resultqq6= mysqli_query($link,$sqlqq6);
+				$rowqq6 = mysqli_fetch_array($resultqq6);
+				if(mysqli_num_rows($resultqq6) > 0) {
+					$nameqq6 = $rowqq6['name'];
+					$priceqq6 = $rowqq6['unit_price'];
+				} else {
+					echo "<center>NO DATA AVAILABLE</center>";
+				}
+			?>
+			  <h1><?php echo $nameqq6 ; ?></h1> 
+			  <p>Price: Rs. <?php echo $priceqq6 ; ?> /=</p> 
+			  
+			</div>
+		  </div>
+		  <p><button onclick="location.href='php/addtocart.php' <?php $_SESSION['brcd'] = $barcodeq6; ?>">Add to Cart</button></p>
+		  <p><button onclick="location.href='php/productdetails.php' <?php $_SESSION['brcd'] = $barcodeq6; ?>">View Product</button></p>
+	</div>
+	</div>
+	
+	<div class="GMitem-column">
+	<div class="GMitem-card">
+		<div class="GMitem-card-inner">
+			<div class="GMitem-card-front">
+			<?php
+			$sqlq7 = "SELECT barcode,name FROM images ORDER BY RAND() LIMIT 1"; 
+			$resultq7 = mysqli_query($link,$sqlq7); 
+			$rowq7 = mysqli_fetch_array($resultq7);
+			if(mysqli_num_rows($resultq7) > 0){ 
+				$imageq7 = $rowq7['name']; 
+				$barcodeq7 = $rowq7['barcode'];
+				$image_srcq7 = "./admin/upload/".$imageq7;
+				
+			} else {
+				echo "<center>NO PHOTO AVAILABLE</center>";
+			}
+			?>
+			  <img src='<?php echo $image_srcq7;?>' alt="item_image" style="width:250px;height:150px;">
+			</div>
+			<div class="GMitem-card-back">
+			<?php
+				
+				
+				$sqlqq7 = "SELECT * FROM items WHERE barcode=$barcodeq7";
+				$resultqq7= mysqli_query($link,$sqlqq7);
+				$rowqq7 = mysqli_fetch_array($resultqq7);
+				if(mysqli_num_rows($resultqq7) > 0) {
+					$nameqq7 = $rowqq7['name'];
+					$priceqq7 = $rowqq7['unit_price'];
+				} else {
+					echo "<center>NO DATA AVAILABLE</center>";
+				}
+			?>
+			  <h1><?php echo $nameqq7 ; ?></h1> 
+			  <p>Price: Rs. <?php echo $priceqq7 ; ?> /=</p> 
+			  
+			</div>
+		  </div>
+		  <p><button onclick="location.href='php/addtocart.php' <?php $_SESSION['brcd'] = $barcodeq7; ?>">Add to Cart</button></p>
+		  <p><button onclick="location.href='php/productdetails.php' <?php $_SESSION['brcd'] = $barcodeq7; ?>">View Product</button></p>
+	</div>
+	</div>
+</div>
+</div><br><br>
+
+
+
+<div align="center" style="margin-top: 60px;">
+	<button class="previousbtn" onClick="window.location.reload()">Load More</button></p>
+</div>
+</body>
+
+<!--Created by: Herath H.M.I.P(IT20125516) -->

@@ -1,0 +1,61 @@
+.same
+{
+
+height:800px;
+width:30%;
+border: 5px solid black;
+float:left;
+margin:10px;
+background-color: gray;
+margin-top: 30px;
+
+
+}
+
+.img1
+{
+width: 300px;
+height: 200px;
+margin:1px;
+
+}
+
+.text1
+{
+color:#000099;
+font-family: serif;
+
+
+}
+
+.text2
+{
+font-size: 16px;
+color: #002266;
+margin-left: 5px;
+
+}
+
+.option
+{
+width:80%;
+height: 30px;
+margin-left:5px;
+}
+
+.para
+{
+margin-left:5px;
+font-size: 20px;
+font-weight: bold;
+
+}
+
+.img2
+{
+margin-left: 70px;
+width:300px;
+height: 300px;
+
+}
+

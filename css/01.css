@@ -1,0 +1,243 @@
+.loginDiv
+{
+	height:650px;
+	width:38%;
+	border: 5px solid black;
+	float:left;
+	margin:50px;
+	background-color: #E8E8E8;
+}
+
+.joinDiv
+{
+
+	height:650px;
+	width:38%;
+	border: 5px solid black;
+	float:right;
+	margin:50px;
+	background-color: #E8E8E8;
+}
+
+.button 
+{
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 18px;
+  margin-left: 5px;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  font-weight: bold;
+ 
+}
+
+.btnWidth
+{
+  width:90%;
+  margin-left: 5px;
+  height: 20px;	
+
+}
+
+.button1 
+{
+  background-color:#ff1a1a;
+  color: white;
+  padding: 10px 18px;
+  margin-left: 5px;
+  border: none;
+  width: 30%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.text1
+{
+font-size: 15px;
+font-weight: bold;
+color: #003366; 
+margin-left: 2px;
+
+}
+
+.userImg
+{
+	width: 150px;
+	height: 150px;
+
+}
+
+.button2 {
+  background-color:blue;
+  color: white;
+  padding: 10px 18px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 90%;
+}
+
+.button3 {
+  background-color:red;
+  color: white;
+  padding: 10px 18px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 90%;
+
+}
+
+.button4 {
+  background-color:#C8C8C8;
+  color: white;
+  padding: 10px 18px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 90%;
+}
+
+.button5 {
+  background-color:	#989898;
+  color: white;
+  padding: 10px 18px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  
+}
+
+.Text
+{
+font-weight: bold;
+color:  #003366; 
+font-size: 40px;
+}
+
+.text2
+{
+
+font-size: 50px;
+text-shadow:2px 2px 5px #191970;
+font-family: Times, serif;
+text-align: center;
+
+}
+
+.btn
+{
+background-color:#006666;
+box-shadow:2px 2px 2px #00a3ad;
+border-radius:10px;
+text-align:center;
+font-size:16px;
+width:12%;
+height: 30px;
+margin-left: 20px;
+font-weight: bold;
+color: white;
+}
+
+.hr1
+{
+border-top: 5px solid #000080;
+
+}
+
+.buttonDiv
+{
+	background-color: #00cccc;
+}
+
+.para
+{
+	font-size: 25px;
+	color:#800040; 
+}
+
+.venderDiv
+{
+
+	height:700px;
+	width:30%;
+	float:left;
+	margin:20px;
+	background-color:#e6faff;
+	border-radius: 20px;
+	border:5px solid #4d79ff;
+	position: fixed;
+
+}
+
+.text3
+{
+color:#000080 ;
+font-size: 50px;
+text-shadow:2px 2px 5px #9999ff;
+font-family: Times, serif;
+text-align: center;
+
+}
+
+.venderImg
+{
+width:280px;
+height:280px;
+margin-top: 20px;
+background-color: black;
+padding-right:20px;
+padding-top:10px;
+padding-left:5px;
+padding-bottom:10px;
+border-radius: 15px;
+
+}
+
+.register
+{
+background-color:blue;
+color:white;
+padding: 10px 18px;
+margin-left: 10px;
+border: none;
+cursor: pointer;
+width: 140px;
+}
+
+.more
+{
+background-color:#0000cc;
+color: white;
+padding: 10px 18px;
+margin-left: 10px;
+border: none;
+cursor: pointer;
+width: 140px;
+
+
+}
+
+.text4
+{
+margin-left: 5px;
+color: #0000cc;
+}
+
+.text5
+{
+margin-left: 5px;
+}
+
+.text6
+{
+margin-left: 5px;
+font-size: 17px;
+color:#000033;
+}
+
+.text7{
+  float: right;
+}

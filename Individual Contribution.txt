@@ -1,0 +1,33 @@
++ Please Create database name as 'grocerymart' all are connected with database 
+(Home page is also load with only database randomely) +
+
+* Database File is in the Project folder as SQL file name as 'grocerymart.sql' *
+
+~ Herath H.M.I.P (IT20125516) 
+	Home Page
+	Search Page
+	Contact Us Page	
+	User Register Page
+	Header File
+	Footer File
+	Admin Side Pages
+
+~ Welikadaarachchi D.S.H (IT20134808)
+	Customer Care page
+	Gift Card Details Page 
+ 	Advertise Page 
+
+~ Botheju W.M.N (IT20139230)
+	Gift Card
+	LoginPage 
+	Packages Page
+
+~ Herath H.P.N.U.(IT20156442)
+	Product Details page
+	Sell product page 
+	Today’s offer page
+
+~ Sanjaya A.M.T.(IT20156510)
+	Register Page 
+	Shopping cart Page
+	Vender Register Page

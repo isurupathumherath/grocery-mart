@@ -1,0 +1,757 @@
+/*Header.php -- Start*/ 
+* {box-sizing: border-box;}
+
+body {
+	/*background-image: url("../images/site/bg.png");*/
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Header 1*/
+.GMheader {
+    overflow: hidden;
+    background-color: #0B2F00;
+    padding: 20px 10px 0px 3px;
+    width: 100%;
+}
+
+.GMnoHover{
+    background-color: unset !important;
+	color: unset !important;
+}
+
+.GMheader a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 20px;
+    border-radius: 4px;
+}
+
+.GMheader a:hover {
+    background-color: #45922F;
+    color: white;
+}
+
+.GMheader a.active {
+    background-color: 45922F;
+    color: white;
+}
+
+.header-left {
+    float: left;
+}
+
+@media screen and (max-width: 500px) {
+    .GMheader a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    
+    .GMheader-right {
+        float: none;
+    }
+
+    .GMheader.responsive .dropdown {float: none;}
+    .GMheader.responsive .dropdown-content {position: relative;}
+    .GMheader.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/*Header 2*/
+
+.GMheader1 {
+    overflow: hidden;
+    background-color: #45922F;
+    padding: 6px 10px;
+    width: 80%;
+    border-radius: 5px;
+	margin-left: 50px;
+	margin-right: 50px;
+
+}
+
+.GMheader1 a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.GMheader1 a:hover {
+    background-color: #71B509;
+    color: black;
+}
+
+.GMheader1 a.active {
+    background-color: 45922F;
+    color: white;
+}
+
+.GMheader1-left {
+    float: left;
+}
+
+@media screen and (max-width: 500px) {
+    .GMheader1 a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    
+    .GMheader1-right {
+        float: none;
+    }
+
+    .GMheader1.responsive .dropdown {float: none;}
+    .GMheader1.responsive .dropdown-content {position: relative;}
+    .GMheader1.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.GMlogo-img{
+    width:150px;
+    height:150px;
+    margin-right: 10px;
+}
+
+.GMsearchInput[type=text] {
+    width: 250px;
+    box-sizing: border-box;
+    border: 2px solid #31f50094;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #949c9294;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    margin-top: 15px;
+}
+
+.GMsearchInput[type=text]:focus {
+    width: 50%;
+}
+/* Style the submit button */
+form.GMsearch button {
+    width: 10%;
+    padding: 11px;
+    background: #71B509;
+    color: white;
+    font-size: 17px;
+    border: 1px solid #31f50094;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+form.GMsearch button:hover {
+    background: #45922F;
+}
+
+/*header.php -- end*/
+
+/*footer.php -- start */
+
+*{
+    padding:0;
+    margin:0;
+}
+
+html{
+    background-color: white;
+}
+
+header{
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom:100px;
+}
+
+header h1{
+    font: normal 32px/1.5 'Open Sans', sans-serif;
+    color: #3F71AE;
+    padding-bottom: 16px;
+}
+
+header h2{
+    color: #F05283;
+}
+
+header span{
+    color: #3F71EA;
+}
+
+
+/* The footer is fixed to the bottom of the page */
+
+footer{
+    position: fixed;
+    bottom: 0;
+}
+
+@media (max-height:800px){
+    footer { position: static; }
+    header { padding-top:30px; }
+}
+
+
+.GMfooter-distributed{
+    background-color: #0B2F00;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 30px 10px 30px 30px;
+    margin-top: 50px;
+}
+
+.GMfooter-distributed .GMfooter-left,
+.GMfooter-distributed .GMfooter-center,
+.GMfooter-distributed .GMfooter-right{
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.GMfooter-distributed .GMfooter-left{
+    width: 30%;
+}
+
+.GMfooter-distributed h3{
+    color:  white;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+}
+
+.GMfooter-distributed .GMfooter-left img{
+    width: 30%;
+}
+
+.GMfooter-distributed h3 span{
+    color:  #e0ac1c;
+}
+
+/* Footer links */
+
+.GMfooter-distributed .GMfooter-links{
+    color:  #ffffff;
+    margin: 20px 0 12px;
+}
+
+.GMfooter-distributed .GMfooter-links a{
+    display:inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color:  inherit;
+}
+
+.GMfooter-distributed .GMfooter-company-name{
+    color:  white;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.GMfooter-distributed .GMfooter-center{
+    width: 35%;
+}
+
+
+.GMfooter-distributed .GMfooter-center i{
+    background-color:  #d0e7ac;
+    color: #345304;
+    font-size: 20px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.GMfooter-distributed .GMfooter-center i.fa-envelope{
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.footer-distributed .GMfooter-center p{
+    display: inline-block;
+    color: #71B509;
+    vertical-align: middle;
+    margin:0;
+}
+
+.GMfooter-distributed .GMfooter-center p span{
+    display:block;
+    font-weight: normal;
+    font-size:16px;
+    line-height:0;
+}
+
+.GMfooter-distributed .GMfooter-center p a{
+    color:  #71B509;
+    text-decoration: none;
+}
+
+
+/* Footer Right */
+
+.GMfooter-distributed .GMfooter-right{
+    width: 30%;
+}
+
+.GMfooter-distributed .GMfooter-company-about{
+    line-height: 20px;
+    color:  #a1e041;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+	margin-top: 100px;
+	text-align: center;
+}
+
+.GMfooter-distributed .GMfooter-company-about span{
+    display: block;
+    color:  #71B509;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.GMfooter-distributed .GMfooter-center span{
+    display: block;
+    color:  #71B509;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.GMfooter-distributed .GMfooter-icons{
+    margin-top: 20px;
+}
+
+.GMfooter-distributed .GMfooter-icons a{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-color:  #000000;
+    border-radius: 2px;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+/*code for Responsive Footer */
+
+@media (max-width: 880px) {
+
+    .GMfooter-distributed .GMfooter-left,
+    .GMfooter-distributed .GMfooter-center,
+    .GMfooter-distributed .GMfooter-right{
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .GMfooter-distributed .GMfooter-center i{
+        margin-left: 0;
+		width: 100%;
+    }
+
+}
+/*footer.php -- end */
+
+
+
+/*Slide Show -- Strat*/
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.GMslideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.GMmySlides {
+	border: 2px solid green;
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: 45922F;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #0B2F00;
+  font-size: 50px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #45922F;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.GMdot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*Slide Show -- End*/
+
+
+/*Login Form -- Start*/
+/* Full-width input fields */
+	input[type=text], input[type=password] {
+	  width: 100%;
+	  padding: 12px 20px;
+	  margin: 8px 0;
+	  display: inline-block;
+	  border: 1px solid green;
+	  box-sizing: border-box;
+	}
+
+	/* Set a style for all buttons */
+	button {
+	  background-color: #4CAF50;
+	  color: white;
+	  padding: 10px 20px;
+	  margin: 2px 0;
+	  border: none;
+	  cursor: pointer;
+	  width: auto;
+	}
+
+	button:hover {
+	  opacity: 0.8;
+	}
+
+	/* Extra styles for the cancel button */
+	.GMcancelbtn {
+	  width: auto;
+	  padding: 10px 18px;
+	  background-color: #f44336;
+	}
+
+	/* Center the image and position the close button */
+	.GMimgcontainer {
+	  text-align: center;
+	  margin: 24px 0 12px 0;
+	  position: relative;
+	}
+
+.gm-login-container{
+	  padding: 16px;
+	  text-align: center;
+	}
+	
+.GMform {
+	  padding: 16px;
+	  text-align: center;
+	}
+
+.container {
+	  padding: 16px;
+	}
+
+span.GMpsw {
+	  float: right;
+	  padding-top: 16px;
+	}
+
+/* The Modal (background) */
+.GMmodal {
+	  display: none; /* Hidden by default */
+	  position: fixed; /* Stay in place */
+	  z-index: 1; /* Sit on top */
+	  left: 0;
+	  top: 0;
+	  width: 100%; /* Full width */
+	  height: 100%; /* Full height */
+	  overflow: auto; /* Enable scroll if needed */
+	  background-color: rgb(0,0,0); /* Fallback color */
+	  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	  padding-top: 40px;
+	}
+
+	/* Modal Content/Box */
+	.GMmodal-content {
+	  background-color: #fefefe;
+	  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+	  border: 5px solid green;
+	  width: 50%; /* Could be more or less, depending on screen size */
+	}
+
+	/* The Close Button (x) */
+	.GMclose {
+	  position: absolute;
+	  right: 25px;
+	  top: 0;
+	  color: #000;
+	  font-size: 35px;
+	  font-weight: bold;
+	}
+
+	.GMclose:hover,
+	.GMclose:focus {
+	  color: red;
+	  cursor: pointer;
+	}
+
+	/* Add Zoom Animation */
+	.GManimate {
+	  -webkit-animation: animatezoom 0.6s;
+	  animation: animatezoom 0.6s
+	}
+
+	@-webkit-keyframes animatezoom {
+	  from {-webkit-transform: scale(0)} 
+	  to {-webkit-transform: scale(1)}
+	}
+	  
+	@keyframes animatezoom {
+	  from {transform: scale(0)} 
+	  to {transform: scale(1)}
+	}
+
+	/* Change styles for span and cancel button on extra small screens */
+	@media screen and (max-width: 300px) {
+	  span.GMpsw {
+		 display: block;
+		 float: none;
+	  }
+	  .GMcancelbtn {
+		 width: 100%;
+	  }
+	}
+
+	/*Login Form -- End*/
+	
+/*Item Page -- CSS Start*/
+.GMitem-card {
+	  background-color: transparent;
+	  width: 250px;
+	  height: 150px;
+	  perspective: 1000px;
+	}
+
+.GMitem-card-inner {
+	  position: relative;
+	  width: 100%;
+	  height: 100%;
+	  text-align: center;
+	  transition: transform 0.6s;
+	  transform-style: preserve-3d;
+	  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	}
+
+.GMitem-card:hover .GMitem-card-inner {
+	  transform: rotateY(180deg);
+	}
+
+.GMitem-card-front, .GMitem-card-back {
+	  position: absolute;
+	  width: 100%;
+	  height: 100%;
+	  -webkit-backface-visibility: hidden;
+	  backface-visibility: hidden;
+	}
+
+.GMitem-card-front {
+	  background-color: #bbb;
+	  color: black;
+	}
+
+.GMitem-card-back {
+	  background-color: #A2B110;
+	  color: white;
+	  transform: rotateY(180deg);
+	}
+	
+/* The grid: Four equal columns that floats next to each other */
+.GMitem-column {
+		float: right;
+		width: 25%;
+		padding: 10px;
+	}
+/*Item Page -- CSS End*/
+
+
+input[type=submit] {
+		background-color: #4CAF50; /* Green */
+		border: 2px solid green;
+		width: 100%;
+		height: 50px;
+	}
+input[type=reset] {
+		background-color: red;
+		border: 2px solid green;
+		width: 100%;
+		height: 30px;
+	}
+
+/* SLIDER in SEARCH PAGE Start*/
+.GMslidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.GMslider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.GMslider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.GMslider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.GMslider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+/* SLIDER in SEARCH PAGE End*/
+
+/*Start Rating in SEARCH PAGE -- Start*/
+
+.GMrating > span:hover:before {
+   content: "\2605";
+   position: absolute;
+}
+
+.GMrating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.GMrating > span:hover:before,
+.GMrating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+
+.GMrating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.GMrating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.GMrating > span:hover:before,
+.GMrating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+
+/*Start Rating -- END*/
